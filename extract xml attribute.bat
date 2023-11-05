@@ -28,7 +28,7 @@ for /f "delims=" %%b in ("!tokenLine!") do (
 )
 
 :print_token
-:: The token is extracted up to the first space, assuming no spaces are within the token
+:: The token is extracted up to the first double-quote (second in original search string)
 for /f tokens^=1^ delims^=^" %%c in ("!tokenValue!") do (
     set "finalToken=%%c"
 )
